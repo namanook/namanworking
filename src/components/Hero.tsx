@@ -1,7 +1,19 @@
 
 import { Button } from "@/components/ui/button";
+import { useState, useEffect } from "react";
 
 export const Hero = () => {
+  const [currentTitle, setCurrentTitle] = useState(0);
+  const titles = ["Data Scientist", "AI/ML Engineer"];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTitle((prev) => (prev + 1) % titles.length);
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -26,8 +38,17 @@ export const Hero = () => {
           </div>
           
           <h1 className="font-playfair text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            <span className="text-elegant-charcoal">Data</span>
-            <span className="text-elegant-purple"> Scientist</span>
+            <span className="text-elegant-charcoal">
+              <span 
+                key={currentTitle}
+                className="inline-block animate-fade-in"
+                style={{
+                  animation: 'fadeInOut 1s ease-in-out'
+                }}
+              >
+                {titles[currentTitle]}
+              </span>
+            </span>
           </h1>
           
           <p className="text-elegant-slate text-lg lg:text-xl mb-8 leading-relaxed max-w-xl">
