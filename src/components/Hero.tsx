@@ -4,7 +4,10 @@ import { useState, useEffect } from "react";
 
 export const Hero = () => {
   const [currentTitle, setCurrentTitle] = useState(0);
-  const titles = ["Data Scientist", "AI/ML Engineer"];
+  const titles = [
+    { first: "Data", second: "Scientist" },
+    { first: "AI/ML", second: "Engineer" }
+  ];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -38,16 +41,15 @@ export const Hero = () => {
           </div>
           
           <h1 className="font-playfair text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            <span className="text-elegant-charcoal">
-              <span 
-                key={currentTitle}
-                className="inline-block animate-fade-in"
-                style={{
-                  animation: 'fadeInOut 1s ease-in-out'
-                }}
-              >
-                {titles[currentTitle]}
-              </span>
+            <span 
+              key={currentTitle}
+              className="inline-block animate-fade-in"
+              style={{
+                animation: 'fadeInOut 1s ease-in-out'
+              }}
+            >
+              <span className="text-elegant-charcoal">{titles[currentTitle].first}</span>
+              <span className="text-elegant-purple"> {titles[currentTitle].second}</span>
             </span>
           </h1>
           
