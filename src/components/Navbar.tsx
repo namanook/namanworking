@@ -55,6 +55,12 @@ export const Navbar = () => {
               Projects
             </button>
             <button
+              onClick={() => scrollToSection("certifications")}
+              className="text-elegant-slate hover:text-elegant-purple transition-colors duration-300"
+            >
+              Certifications
+            </button>
+            <button
               onClick={() => scrollToSection("contact")}
               className="text-elegant-slate hover:text-elegant-purple transition-colors duration-300"
             >
