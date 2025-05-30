@@ -1,5 +1,6 @@
 
 import { Button } from "@/components/ui/button";
+import { ExternalLink } from "lucide-react";
 
 export const Portfolio = () => {
   const projects = [
@@ -7,21 +8,28 @@ export const Portfolio = () => {
       title: "Heart Disease Detection from ECG",
       description: "ML Internship @ C-DAC - Used Random Forest/SVM on preprocessed ECG data to achieve 92% accuracy.",
       technologies: ["Python", "Random Forest", "SVM", "ECG Analysis"],
-      category: "Machine Learning"
+      category: "Machine Learning",
+      link: "https://github.com/naman-gupta/heart-disease-detection" // Add your actual GitHub link
     },
     {
       title: "SKIMLIT Biomedical NLP",
       description: "Sentence classification in medical abstracts using Conv1D deep learning model for enhanced literature review.",
       technologies: ["NLP", "Conv1D", "TensorFlow", "Biomedical Text"],
-      category: "Deep Learning"
+      category: "Deep Learning",
+      link: "https://github.com/naman-gupta/skimlit-biomedical-nlp" // Add your actual GitHub link
     },
     {
       title: "Time Series Forecasting – Bitcoin",
       description: "Built dense neural network models to forecast Bitcoin price trends using historical data (2013–2021).",
       technologies: ["Time Series", "Neural Networks", "Python", "Financial Data"],
-      category: "Forecasting"
+      category: "Forecasting",
+      link: "https://github.com/naman-gupta/bitcoin-forecasting" // Add your actual GitHub link
     }
   ];
+
+  const handleProjectLink = (link: string) => {
+    window.open(link, '_blank', 'noopener,noreferrer');
+  };
 
   return (
     <section id="portfolio" className="py-20 px-6 bg-gradient-to-br from-elegant-light-gray to-white">
@@ -66,10 +74,14 @@ export const Portfolio = () => {
               </div>
               
               <Button
+                onClick={() => handleProjectLink(project.link)}
                 variant="outline"
-                className="w-full border-elegant-purple text-elegant-purple hover:bg-elegant-purple hover:text-white transition-all duration-300"
+                className="w-full border-elegant-purple text-elegant-purple hover:bg-elegant-purple hover:text-white transition-all duration-300 group/btn"
               >
-                Learn More
+                <span className="flex items-center justify-center gap-2">
+                  Learn More
+                  <ExternalLink className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
+                </span>
               </Button>
             </div>
           ))}
