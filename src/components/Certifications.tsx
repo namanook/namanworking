@@ -1,4 +1,3 @@
-
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Award, Calendar, ExternalLink } from "lucide-react";
@@ -22,12 +21,12 @@ export const Certifications = () => {
       badge: "Cloud"
     },
     {
-      title: "Time Series Forecasting",
-      issuer: "Professional Training",
+      title: "AWS APAC Solution Architecture",
+      issuer: "Amazon Web Services",
       date: "2024",
-      type: "Machine Learning",
-      description: "Advanced techniques for time series analysis and prediction",
-      badge: "ML"
+      type: "Cloud Architecture",
+      description: "Advanced solution architecture design for AWS APAC region",
+      badge: "Architecture"
     },
     {
       title: "Prompt Engineering",
