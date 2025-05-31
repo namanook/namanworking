@@ -1,3 +1,4 @@
+
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Award, Calendar, ExternalLink } from "lucide-react";
@@ -10,7 +11,8 @@ export const Certifications = () => {
       date: "2024",
       type: "Cloud AI",
       description: "Foundational understanding of AI/ML services on AWS",
-      badge: "AI/ML"
+      badge: "AI/ML",
+      link: "https://drive.google.com/file/d/18JaVxMXtljxnT_Jjs42kwYKZ9ul3hElS/view?usp=sharing"
     },
     {
       title: "AWS Cloud Practitioner",
@@ -18,7 +20,8 @@ export const Certifications = () => {
       date: "2024",
       type: "Cloud Computing",
       description: "Core AWS services and cloud computing fundamentals",
-      badge: "Cloud"
+      badge: "Cloud",
+      link: "https://drive.google.com/file/d/186KNPfb0nigRXK4-28nyr0HLyyKM_orw/view?usp=sharing"
     },
     {
       title: "AWS APAC Solution Architecture",
@@ -26,7 +29,8 @@ export const Certifications = () => {
       date: "2024",
       type: "Cloud Architecture",
       description: "Advanced solution architecture design for AWS APAC region",
-      badge: "Architecture"
+      badge: "Architecture",
+      link: "https://drive.google.com/file/d/1DkJtsUYZisiMcdQd0nRdfyI3MtHaKW5f/view?usp=sharing"
     },
     {
       title: "Prompt Engineering",
@@ -37,6 +41,10 @@ export const Certifications = () => {
       badge: "AI"
     }
   ];
+
+  const handleCertificateLink = (link: string) => {
+    window.open(link, '_blank', 'noopener,noreferrer');
+  };
 
   return (
     <section id="certifications" className="py-20 px-6 bg-white">
@@ -92,7 +100,14 @@ export const Certifications = () => {
                   <span className="text-xs font-medium text-elegant-purple bg-elegant-purple/5 px-3 py-1 rounded-full">
                     {cert.type}
                   </span>
-                  <ExternalLink className="w-4 h-4 text-elegant-dusty-blue group-hover:text-elegant-purple transition-colors duration-300" />
+                  {cert.link ? (
+                    <ExternalLink 
+                      className="w-4 h-4 text-elegant-dusty-blue group-hover:text-elegant-purple transition-colors duration-300 cursor-pointer" 
+                      onClick={() => handleCertificateLink(cert.link)}
+                    />
+                  ) : (
+                    <ExternalLink className="w-4 h-4 text-elegant-dusty-blue group-hover:text-elegant-purple transition-colors duration-300" />
+                  )}
                 </div>
               </CardContent>
             </Card>
