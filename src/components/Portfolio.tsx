@@ -16,14 +16,14 @@ export const Portfolio = () => {
       description: "Sentence classification in medical abstracts using Conv1D deep learning model for enhanced literature review.",
       technologies: ["NLP", "Conv1D", "TensorFlow", "Biomedical Text"],
       category: "Deep Learning",
-      link: "https://github.com/naman-gupta/skimlit-biomedical-nlp" // Add your actual GitHub link
+      link: "https://github.com/namanook/SKIMLIT"
     },
     {
       title: "Time Series Forecasting – Bitcoin",
       description: "Built dense neural network models to forecast Bitcoin price trends using historical data (2013–2021).",
       technologies: ["Time Series", "Neural Networks", "Python", "Financial Data"],
       category: "Forecasting",
-      link: "https://github.com/naman-gupta/bitcoin-forecasting" // Add your actual GitHub link
+      link: "https://github.com/namanook/TIME-SERIES-FORCASTING-OF-BITCOIN"
     }
   ];
 
