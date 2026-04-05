@@ -5,11 +5,18 @@ import { ExternalLink } from "lucide-react";
 export const Portfolio = () => {
   const projects = [
     {
+      title: "Agentic AI Startup Intelligence Platform",
+      description: "Built a zero-cost agentic GenAI system that evaluates startup ideas using RAG, multi-agent reasoning, and dynamic tool invocation via MCP-style architecture.",
+      technologies: ["LangGraph", "LangChain", "FAISS", "HuggingFace", "Ollama", "RAG"],
+      category: "Generative AI",
+      link: ""
+    },
+    {
       title: "Heart Disease Detection from ECG",
       description: "ML Internship @ C-DAC - Used Random Forest/SVM on preprocessed ECG data to achieve 92% accuracy.",
       technologies: ["Python", "Random Forest", "SVM", "ECG Analysis"],
       category: "Machine Learning",
-      link: "https://github.com/naman-gupta/heart-disease-detection" // Add your actual GitHub link
+      link: "https://github.com/naman-gupta/heart-disease-detection"
     },
     {
       title: "SKIMLIT Biomedical NLP",
@@ -20,15 +27,17 @@ export const Portfolio = () => {
     },
     {
       title: "Time Series Forecasting – Bitcoin",
-      description: "Built dense neural network models to forecast Bitcoin price trends using historical data (2013–2021).",
-      technologies: ["Time Series", "Neural Networks", "Python", "Financial Data"],
+      description: "Engineered a deep learning forecasting model for daily Bitcoin price prediction using sliding window techniques; evaluated using RMSE and MAE metrics.",
+      technologies: ["TensorFlow/Keras", "Pandas", "NumPy", "Matplotlib"],
       category: "Forecasting",
       link: "https://github.com/namanook/TIME-SERIES-FORCASTING-OF-BITCOIN"
     }
   ];
 
   const handleProjectLink = (link: string) => {
-    window.open(link, '_blank', 'noopener,noreferrer');
+    if (link) {
+      window.open(link, '_blank', 'noopener,noreferrer');
+    }
   };
 
   return (
@@ -41,7 +50,7 @@ export const Portfolio = () => {
           <div className="w-24 h-1 bg-elegant-purple mx-auto rounded-full" />
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <div
               key={project.title}
@@ -73,16 +82,26 @@ export const Portfolio = () => {
                 ))}
               </div>
               
-              <Button
-                onClick={() => handleProjectLink(project.link)}
-                variant="outline"
-                className="w-full border-elegant-purple text-elegant-purple hover:bg-elegant-purple hover:text-white transition-all duration-300 group/btn"
-              >
-                <span className="flex items-center justify-center gap-2">
-                  Learn More
-                  <ExternalLink className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
-                </span>
-              </Button>
+              {project.link ? (
+                <Button
+                  onClick={() => handleProjectLink(project.link)}
+                  variant="outline"
+                  className="w-full border-elegant-purple text-elegant-purple hover:bg-elegant-purple hover:text-white transition-all duration-300 group/btn"
+                >
+                  <span className="flex items-center justify-center gap-2">
+                    Learn More
+                    <ExternalLink className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
+                  </span>
+                </Button>
+              ) : (
+                <Button
+                  variant="outline"
+                  disabled
+                  className="w-full border-elegant-dusty-blue/30 text-elegant-slate cursor-default"
+                >
+                  Coming Soon
+                </Button>
+              )}
             </div>
           ))}
         </div>

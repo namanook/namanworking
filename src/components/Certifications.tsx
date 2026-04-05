@@ -39,6 +39,14 @@ export const Certifications = () => {
       type: "AI Engineering",
       description: "Advanced prompt design and optimization for LLMs",
       badge: "AI"
+    },
+    {
+      title: "AWS Generative AI Engineer",
+      issuer: "Amazon Web Services",
+      date: "2026 (In Progress)",
+      type: "Generative AI",
+      description: "Advanced generative AI engineering on AWS platform",
+      badge: "GenAI"
     }
   ];
 
