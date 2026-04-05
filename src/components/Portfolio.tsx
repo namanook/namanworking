@@ -9,7 +9,7 @@ export const Portfolio = () => {
       description: "Built a zero-cost agentic GenAI system that evaluates startup ideas using RAG, multi-agent reasoning, and dynamic tool invocation via MCP-style architecture.",
       technologies: ["LangGraph", "LangChain", "FAISS", "HuggingFace", "Ollama", "RAG"],
       category: "Generative AI",
-      link: ""
+      link: "https://github.com/namanook/ai_startup"
     },
     {
       title: "Heart Disease Detection from ECG",
