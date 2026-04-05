@@ -13,14 +13,14 @@ export const About = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="animate-slide-up">
             <p className="text-elegant-slate text-lg leading-relaxed mb-6">
-              I am a highly motivated Data Scientist with a strong passion for uncovering 
-              insights from data and contributing to impactful decision-making. I specialize 
-              in predictive modeling, machine learning, and cloud-based AI solutions.
+              AI/ML Engineer with hands-on industry experience designing and deploying 
+              end-to-end Generative AI and machine learning systems on AWS. Proficient in 
+              LLM orchestration (LangChain, LangGraph), agentic AI pipelines, computer vision, 
+              NLP, and scalable FastAPI backends.
             </p>
             <p className="text-elegant-slate text-lg leading-relaxed mb-8">
-              I hold certifications as an AWS Cloud Practitioner and AI Practitioner. 
-              My goal is to apply advanced analytical techniques to help organizations 
-              grow and innovate through data-driven strategies.
+              AWS Certified AI Practitioner and Cloud Practitioner. Passionate about building 
+              production-grade GenAI products from data preparation through inference and deployment.
             </p>
           </div>
 

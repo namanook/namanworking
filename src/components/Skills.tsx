@@ -1,27 +1,37 @@
 
-import { Code, User, Briefcase, Calendar } from "lucide-react";
+import { Code, User, Briefcase, Calendar, Brain, Cloud, Server } from "lucide-react";
 
 export const Skills = () => {
   const skillCategories = [
     {
-      title: "Core Skills",
-      icon: Code,
-      skills: ["Machine Learning", "Deep Learning", "Predictive Modeling", "NLP"]
+      title: "Generative AI & LLMs",
+      icon: Brain,
+      skills: ["LangChain", "LangGraph", "RAG", "Prompt Engineering", "MCP Servers", "Agentic Pipelines", "FAISS", "GPT / Claude / Llama"]
     },
     {
-      title: "Tools & Frameworks",
-      icon: Briefcase,
-      skills: ["TensorFlow", "Keras", "Scikit-learn", "Pandas", "NumPy", "Matplotlib"]
+      title: "ML & Deep Learning",
+      icon: Code,
+      skills: ["TensorFlow", "Keras", "Scikit-learn", "NLP", "Computer Vision", "Predictive Modelling", "Time Series Forecasting"]
+    },
+    {
+      title: "Cloud & MLOps",
+      icon: Cloud,
+      skills: ["Amazon SageMaker", "AWS Lambda", "AWS SQS", "AWS S3", "Serverless Deployment", "Cloudflare R2"]
+    },
+    {
+      title: "Backend & APIs",
+      icon: Server,
+      skills: ["FastAPI", "REST APIs", "SSE", "Async Python", "Redis", "MongoDB", "BytePlus Vision API"]
     },
     {
       title: "Programming",
       icon: User,
-      skills: ["Python", "C++", "HTML/CSS"]
+      skills: ["Python", "C++", "HTML/CSS", "Git"]
     },
     {
-      title: "Cloud & Certifications",
-      icon: Calendar,
-      skills: ["AWS AI Practitioner", "AWS Cloud Practitioner", "Time Series Forecasting", "Prompt Engineering"]
+      title: "Tools & Frameworks",
+      icon: Briefcase,
+      skills: ["Pandas", "NumPy", "Matplotlib", "HuggingFace", "Ollama"]
     }
   ];
 
@@ -35,7 +45,7 @@ export const Skills = () => {
           <div className="w-24 h-1 bg-elegant-purple mx-auto rounded-full" />
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skillCategories.map((category, index) => (
             <div
               key={category.title}
@@ -50,8 +60,8 @@ export const Skills = () => {
                 {category.title}
               </h3>
               
-              <div className="space-y-2">
-                {category.skills.map((skill, skillIndex) => (
+              <div className="flex flex-wrap gap-2 justify-center">
+                {category.skills.map((skill) => (
                   <div
                     key={skill}
                     className="text-elegant-slate text-sm bg-elegant-cream px-3 py-2 rounded-lg text-center"
