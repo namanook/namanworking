@@ -71,7 +71,7 @@ export const Contact = () => {
           </h2>
           <div className="w-24 h-1 bg-elegant-purple mx-auto rounded-full" />
           <p className="text-elegant-slate text-lg mt-6 max-w-2xl mx-auto">
-            Ready to turn your data into actionable insights? Let's discuss how we can work together.
+            Have a GenAI idea, need an ML solution, or want to leverage data science for your business? Let's build something intelligent together.
           </p>
         </div>
 
