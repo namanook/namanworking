@@ -6,7 +6,8 @@ export const Hero = () => {
   const [currentTitle, setCurrentTitle] = useState(0);
   const titles = [
     { first: "Data", second: "Scientist" },
-    { first: "AI/ML", second: "Engineer" }
+    { first: "AI/ML", second: "Engineer" },
+    { first: "GenAI", second: "Engineer" }
   ];
 
   useEffect(() => {
